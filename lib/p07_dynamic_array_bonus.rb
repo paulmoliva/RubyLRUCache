@@ -36,7 +36,11 @@ class DynamicArray
 
   def [](i)
     begin
-      @store[i]
+      if i < 0
+        @store[(last_index + i + 1)]
+      else
+        @store[i]
+      end
     rescue
       nil
     end
