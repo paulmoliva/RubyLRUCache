@@ -1,5 +1,6 @@
 require 'rspec'
 require 'p07_dynamic_array_bonus'
+require 'byebug'
 
 describe DynamicArray do
   let(:arr) { DynamicArray.new(3) }
@@ -182,6 +183,7 @@ describe DynamicArray do
       real_arr = []
       other_dyna = DynamicArray.new(4)
       (1..5).each do |n|
+        # byebug
         arr.push(n)
         real_arr << n
         other_dyna.push(n)
